@@ -12,13 +12,13 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB_k885nZ4D87nOBm6GC4ytey3DML09Qgk",
-  authDomain: "tinder-clone-106d8.firebaseapp.com",
-  projectId: "tinder-clone-106d8",
-  storageBucket: "tinder-clone-106d8.firebasestorage.app",
-  messagingSenderId: "627533303375",
-  appId: "1:627533303375:web:c97a0ff263541376e7243a",
-  measurementId: "G-ZNBWJKFHPM",
+  apiKey: "API_KEY",
+  authDomain: "AUTH_DOMAIN",
+  projectId: "PROJECT_ID",
+  storageBucket: "BUCKET_NAME",
+  messagingSenderId: "SENDER_ID",
+  appId: "APP_ID",
+  measurementId: "MEASUREMENT_ID",
 };
 
 let app, auth;
