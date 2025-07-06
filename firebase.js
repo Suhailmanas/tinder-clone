@@ -12,13 +12,13 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "API_KEY",
-  authDomain: "AUTH_DOMAIN",
-  projectId: "PROJECT_ID",
-  storageBucket: "BUCKET_NAME",
-  messagingSenderId: "SENDER_ID",
-  appId: "APP_ID",
-  measurementId: "MEASUREMENT_ID",
+  apiKey: "AIzaSyB_k885nZ4D87nOBm6GC4ytey3DML09Qgk",
+  authDomain: "tinder-clone-106d8.firebaseapp.com",
+  projectId: "tinder-clone-106d8",
+  storageBucket: "tinder-clone-106d8.firebasestorage.app",
+  messagingSenderId: "627533303375",
+  appId: "1:627533303375:web:c97a0ff263541376e7243a",
+  measurementId: "G-ZNBWJKFHPM",
 };
 
 let app, auth;
@@ -28,9 +28,14 @@ console.log(getApps.length, "getApps.length");
 if (!getApps.length) {
   try {
     app = initializeApp(firebaseConfig);
+    // auth = initializeAuth(app, {
+    //   persistence: getReactNativePersistence(AsyncStorage),
+    // });
+    persistence = getReactNativePersistence(AsyncStorage);
     auth = initializeAuth(app, {
-      persistence: getReactNativePersistence(AsyncStorage),
+      persistence,
     });
+    //https://github.com/firebase/firebase-js-sdk/issues/7615 - refer this for fireBase config's
     console.log("inside this");
   } catch (error) {
     console.log("Error initializing app", error);
@@ -47,6 +52,6 @@ if (!getApps.length) {
 // const auth = getAuth();
 const provider = new EmailAuthProvider();
 
-console.log("authauthauth",auth,"appappappapp",app);
+console.log("authauthauth", auth, "appappappapp", app);
 
 export { app, auth, provider };
